@@ -16,7 +16,27 @@
     "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022"
+    "module": "ES2022",
+    "paths": {
+      // Core
+      "@guards/*": ["./src/app/core/guards/*"],
+      "@interceptors/*": ["./src/app/core/interceptors/*"],
+      "@models/*": ["./src/app/core/models/*"],
+      "@services/*": ["./src/app/core/services/*"],
+      // Features
+      "@auth/*": ["./src/app/features/auth/*"],
+      "@barber-services/*": ["./src/app/features/barber-services/*"],
+      "@booking/*": ["./src/app/features/booking/*"],
+      "@contact/*": ["./src/app/features/contact/*"],
+      "@home/*": ["./src/app/features/home/*"],
+      "@store/*": ["./src/app/features/store/*"],
+      "@user/*": ["./src/app/features/user/*"],
+      // Shared
+      "@shared/*": ["./src/app/shared/shared/*"],
+
+      "@assets/*": ["./src/assets/*"],
+      "@env/*": ["./src/environments/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

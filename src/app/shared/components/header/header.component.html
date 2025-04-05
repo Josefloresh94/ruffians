@@ -1,0 +1,71 @@
+<header class="header">
+  <nav >
+    <!-- Versión escritorio -->
+    <div class="navBar">
+      <!-- Logo y modo oscuro/claro -->
+      <div class="left-section">
+        <span routerLink="/" class="brand">BarberStyle</span>
+      </div>
+      <div class="desktop-nav">
+        <a routerLink="/servicios">Servicios</a>
+        <a routerLink="/cita" class="highlight">Agendar Cita</a>
+        <a routerLink="/tienda">Tienda</a>
+        <a routerLink="/contacto">Contacto</a>
+      </div>
+      <!-- Iconos derecha -->
+      <div class="icon-group">
+        <app-toggle/>
+        <button routerLink="/carrito">
+          <fa-icon [icon]="faShoppingCart"></fa-icon>
+        </button>
+        <button routerLink="/perfil">
+          <fa-icon [icon]="faUser"></fa-icon>
+        </button>
+      </div>
+      <!-- Versión móvil -->
+      <div class="mobile-actions">
+        <app-toggle/>
+        <button routerLink="/carrito">
+          <fa-icon [icon]="faShoppingCart"></fa-icon>
+        </button>
+        <button class="mobile-menu" (click)="toggleMobileMenu()">
+          <fa-icon [icon]="faBars"></fa-icon>
+        </button>
+      </div>
+    </div>
+
+    <!-- Versión móvil -->
+    <div class="mobile-menu-container" [class.active]="isMobileMenuOpen">
+      <ul class="mobile-nav">
+        <li>
+          <a routerLink="/servicios">Servicios</a>
+        </li>
+        <li>
+          <a routerLink="/cita">Agendar Cita</a>
+        </li>
+        <li>
+          <a routerLink="/tienda">Tienda</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+
+  <!-- Menú usuario -->
+  <ng-template>
+    <!-- <button routerLink="/perfil">
+      <fa-icon [icon]="faUser"></fa-icon>
+      Mi Perfil
+    </button>
+    <button routerLink="/configuracion">
+      <fa-icon [icon]="faCog"></fa-icon>
+      Configuración
+    </button>
+    <button (click)="logout()">
+      <fa-icon [icon]="faSignOutAlt"></fa-icon>
+      Cerrar Sesión
+    </button> -->
+  </ng-template>
+
+</header>
