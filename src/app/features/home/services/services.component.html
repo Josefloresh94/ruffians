@@ -1,1 +1,34 @@
-<p>services works!</p>
+<section class="Services">
+  <div class="ServicesContainer">
+    <div class="ServicesContainer-Header">
+      <h2 class="ServicesContainer-Header_Title">Nuestros Servicios</h2>
+      <p class="ServicesContainer-Header_Description">
+        Ofrecemos una amplia gama de servicios de barbería profesional para que luzcas y te sientas mejor.
+      </p>
+    </div>
+    <div class="ServicesContainer-Cards">
+      @for (service of services; track $index) {
+        <div class="ServicesContainer-Cards_Container">
+          <div class="ServicesContainer-Cards_Container-Image">
+            <img [src]="service.image || '../../../../assets/images/placeholder.svg'" alt="{{service.title}}">
+          </div>
+          <div class="ServicesContainer-Cards_Container-Information">
+            <h3>{{service.title}}</h3>
+            <p>{{service.description}}</p>
+            <div class="ServicesContainer-Cards_Container-Information_Data">
+              <span class="">{{service.price}}</span>
+              <a routerLink="/servicios" class="">
+                Ver más
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+      </div>
+    <div class="ServicesContainer-CallToAction">
+      <a href="/servicios" class="">
+        Ver Todos los Servicios
+      </a>
+    </div>
+  </div>
+</section>

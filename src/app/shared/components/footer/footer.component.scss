@@ -1,0 +1,103 @@
+.Footer {
+  width: 100vw;
+
+  .FooterContainer {
+    padding: 3rem 1rem;
+    a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    ul {
+      list-style: none;
+    }
+  }
+
+  .FooterContainer-Info{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .FooterContainer-Info_SocialMedia{
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    p{
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+  }
+
+  .FooterContainer-Info_SocialMedia-Icons{
+    display: flex;
+    a {
+      color: var(--accent);
+      margin-right: 1rem;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+
+  .FooterContainer-Info_Links, .FooterContainer-Info_Services{
+    h3 {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    ul{
+      li{
+        margin-bottom: 0.5rem;
+        a{
+          color: var(--accent);
+          &:hover {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+
+  .FooterContainer-Info_Contact{
+    h3 {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    address {
+      color: var(--accent);
+      font-size: 1rem;
+      line-height: 1.5rem;
+      p:nth-of-type(3){
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .Schedule{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--accent);
+    margin-top: 1rem;
+  }
+
+  .FooterContainer-Register{
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .FooterContainer-Info{
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+}

@@ -3,6 +3,12 @@
   background-color: var(--secondary);
   color: var(--text);
   box-shadow: var(--shadow);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
 
   .navBar {
     display: flex;
@@ -12,7 +18,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
-    max-width: 1200px;
+    max-width: 1368px;
     margin: 0 auto;
   }
 
@@ -21,6 +27,7 @@
     font-weight: bold;
     margin-right: 1rem;
     color: var(--primary);
+    cursor: pointer;
   }
 
   .desktop-nav {
@@ -45,13 +52,8 @@
   .highlight {
     padding: 8px 16px;
     background-color: var(--primary);
-    color: var(--text);
     border-radius: 24px;
     font-weight: 600;
-
-    &:hover {
-      opacity: 0.9;
-    }
   }
 
   .icon-group {

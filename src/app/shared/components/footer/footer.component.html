@@ -1,1 +1,84 @@
-<p>footer works!</p>
+<footer class="Footer">
+  <div class="FooterContainer">
+    <div class="FooterContainer-Info">
+      <div class="FooterContainer-Info_SocialMedia">
+        <h3>BarberStyle</h3>
+        <p>
+          Ofrecemos la mejor experiencia en cortes de cabello y cuidado personal para hombres.
+        </p>
+        <div class="FooterContainer-Info_SocialMedia-Icons">
+          <a href="#">
+            <fa-icon [icon]="faSquareFacebook" />
+          </a>
+          <a href="#">
+            <fa-icon [icon]="faInstagram" />
+          </a>
+          <a href="#">
+            <fa-icon [icon]="faSquareXTwitter" />
+          </a>
+          <a href="#">
+            <fa-icon [icon]="faWhatsapp" />
+          </a>
+        </div>
+      </div>
+
+      <div class="FooterContainer-Info_Links">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li>
+            <a href="/">Inicio</a>
+          </li>
+          <li>
+            <a href="/servicios">Servicios</a>
+          </li>
+          <li>
+            <a href="/citas">Agendar Cita</a>
+          </li>
+          <li>
+            <a href="/tienda">Tienda</a>
+          </li>
+          <li>
+            <a href="/contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="FooterContainer-Info_Services">
+        <h3>Servicios</h3>
+        <ul>
+          <li>
+            <a href="/servicios/corte-clasico">Corte Clásico</a>
+          </li>
+          <li>
+            <a href="/servicios/barba">Arreglo de Barba</a>
+          </li>
+          <li>
+            <a href="/servicios/afeitado">Afeitado Tradicional</a>
+          </li>
+          <li>
+            <a href="/servicios/tratamientos">Tratamientos Capilares</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="FooterContainer-Info_Contact">
+        <h3>Contacto</h3>
+        <address>
+          <p>Calle Principal 123</p>
+          <p>Ciudad, CP 12345</p>
+          <p>Tel: (123) 456-7890</p>
+          <p>Email: infomail.com</p>
+        </address>
+        <div class="Schedule">
+          <p>Horario:</p>
+          <p>Lun-Sáb: 9:00 - 20:00</p>
+          <p>Dom: Cerrado</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="FooterContainer-Register">
+      <p>&copy; {{today | date:"yyyy"}} BarberStyle. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,139 @@
+.Services {
+  width: 100vw;
+  padding: 5rem 0;
+  background-color: var(--secondary);
+
+  .ServicesContainer{
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 1368px;
+  }
+
+  .ServicesContainer-Header{
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .ServicesContainer-Header_Title{
+    margin-bottom: 1rem;
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+  }
+
+  .ServicesContainer-Header_Description{
+    max-width: 42rem;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--accent);
+  }
+
+  .ServicesContainer-Cards{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .ServicesContainer-Cards_Container{
+    border-radius: 0.9rem;
+    background-color: var(--background);
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+
+  .ServicesContainer-Cards_Container-Image{
+    position: relative;
+    height: 12rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    overflow: hidden;
+
+    ima{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    };
+  }
+
+  .ServicesContainer-Cards_Container-Information{
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    p{
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+  }
+
+  .ServicesContainer-Cards_Container-Information_Data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    a{
+      text-decoration: none;
+      color: var(--primary);
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      &:hover{
+        scale: 1.1;
+      }
+    }
+  }
+
+  .ServicesContainer-CallToAction{
+    margin-top: 3rem;
+    text-align: center;
+    a{
+      text-decoration: none;
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      background-color: var(--primary);
+      color: white;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      &:hover{
+        scale: 1.1;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .ServicesContainer-Header_Title{
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+
+    .ServicesContainer-Cards{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .ServicesContainer-Cards{
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+}

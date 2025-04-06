@@ -1,0 +1,83 @@
+.Hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  height: 100vh;
+
+  .HeroContainer {
+    padding: 0 1rem;
+    text-align: center;
+    max-width: 1368px;
+  }
+
+  .HeroContainer-Title{
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+  }
+
+  .HeroContainer-Description{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    max-width: 48rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .HeroContainer-Appointments{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .HeroContainer-Appointments-Date{
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    background-color: var(--primary);
+    color: #fff;
+    transition: 0.2s ease-in-out;
+    &:hover{
+      background-color: rgba(#c3a039, 0.8);
+    }
+  }
+
+  .HeroContainer-Appointments-Services{
+    padding: 0.75rem 2rem;
+    border-radius: 0.4rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    color: var(--text);
+    border: 2px solid var(--text);
+    border-radius: 0.4rem;
+    background-color: transparent;
+  }
+
+  @media (min-width: 768px) {
+    .HeroContainer-Title{
+      font-size: 3.75rem;
+      line-height: 1;
+    }
+
+    .HeroContainer-Description{
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    .HeroContainer-Appointments{
+      flex-direction: row;
+    }
+  }
+}
+
+
