@@ -1,0 +1,99 @@
+<section class="Subsidiaries">
+  <h2>Nuestras Sucursales</h2>
+
+  <!-- {/* Selector de sucursales (móvil) */} -->
+  <div class="Subsidiaries-Options-Mobile">
+    <select
+      class="Mobile-Options"
+      (change)="updateActiveLocation()"
+      >
+      <!-- [(ngModel)]="activeLocationId" -->
+      @for (location of locations; track location.id) {
+        <option [value]="location.id">
+          {{location.name}}
+        </option>
+      }
+    </select>
+  </div>
+
+  <!-- {/* Tabs de sucursales (desktop) */} -->
+  <div class="Subsidiaries-Options-Desktop">
+    @for (location of locations; track location.id) {
+      <button
+        class="Desktop-Options"
+        [class.active]="activeLocationId === location.id"
+        (click)="activeLocationId = location.id; updateActiveLocation()"
+      >
+        {{location.name}}
+      </button>
+    }
+  </div>
+
+  <!-- {/* Información de la sucursal seleccionada */} -->
+  <div class="Location-Card">
+    <div class="Location-Content">
+      <div class="Location-Image">
+        <img [src]="selectedLocation.image" [alt]="selectedLocation.name">
+      </div>
+      <div class="Location-Details">
+        <h3>{{selectedLocation.name}}</h3>
+
+        <div class="Details-Container">
+          <div class="Detail-Item">
+            <fa-icon class="icon" [icon]="faLocationDot"></fa-icon>
+            <div>
+              <p class="Detail-Label">Dirección</p>
+              <p class="Detail-Text">{{selectedLocation.address}}</p>
+              <a
+                [href]="selectedLocation.mapUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="Map-Link"
+              >
+                Ver en mapa
+                <fa-icon class="small-icon" [icon]="faChevronRight"></fa-icon>
+              </a>
+            </div>
+          </div>
+
+          <div class="Detail-Item">
+            <fa-icon class="icon" [icon]="faPhone"></fa-icon>
+            <div>
+              <p class="Detail-Label">Teléfono</p>
+              <p class="Detail-Text">{{selectedLocation.phone}}</p>
+            </div>
+          </div>
+
+          <div class="Detail-Item">
+            <fa-icon class="icon" [icon]="faEnvelope"></fa-icon>
+            <div>
+              <p class="Detail-Label">Email</p>
+              <p class="Detail-Text">{{selectedLocation.email}}</p>
+            </div>
+          </div>
+
+          <div class="Detail-Item">
+            <fa-icon class="icon" [icon]="faClock"></fa-icon>
+            <div>
+              <p class="Detail-Label">Horario</p>
+              @for (hour of selectedLocation.hours; track $index) {
+                <p class="Detail-Text">
+                  {{hour}}
+                </p>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="Action-Container">
+          <a
+            routerLink="/citas"
+            class="Booking-Button"
+          >
+            Agendar Cita en {{selectedLocation.name}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

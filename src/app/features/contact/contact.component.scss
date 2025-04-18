@@ -1,0 +1,29 @@
+.Contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary);
+
+  .Contact-Container {
+    margin: 4rem auto;
+    max-width: 84rem;
+  }
+
+  .Contact-Header {
+    text-align: center;
+    margin: 3rem 0;
+
+    h1 {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p{
+      max-width: 38rem;
+      color: var(--accent);
+      margin: 0 auto;
+    }
+  }
+}

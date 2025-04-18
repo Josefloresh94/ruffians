@@ -1,0 +1,161 @@
+<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+  <!-- {/* Formulario de contacto */} -->
+  <div className="lg:col-span-2 bg-white dark:bg-dark-bg-secondary rounded-lg shadow-md p-6">
+    <h2 className="text-2xl font-bold mb-6 dark:text-white">Envíanos un Mensaje</h2>
+
+    <!-- {formSubmitted ? ( -->
+      <div className="bg-green-50 dark:bg-green-900/30 text-green-800 dark:text-green-300 p-4 rounded-md mb-6">
+        <p className="font-medium">¡Mensaje enviado con éxito!</p>
+        <p>Nos pondremos en contacto contigo lo antes posible.</p>
+      </div>
+    <!-- ) : ( -->
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 font-medium mb-1">
+              Nombre Completo *
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-golden dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 font-medium mb-1">
+              Correo Electrónico *
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-golden dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              required
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="phone" className="block text-gray-700 dark:text-gray-300 font-medium mb-1">
+              Teléfono
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-golden dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            />
+          </div>
+          <div>
+            <label htmlFor="subject" className="block text-gray-700 dark:text-gray-300 font-medium mb-1">
+              Asunto *
+            </label>
+            <select
+              id="subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleInputChange}
+              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-golden dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              required
+            >
+              <option value="">Selecciona un asunto</option>
+              <option value="cita">Información sobre citas</option>
+              <option value="servicios">Información sobre servicios</option>
+              <option value="productos">Información sobre productos</option>
+              <option value="empleo">Oportunidades de empleo</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 font-medium mb-1">
+            Mensaje *
+          </label>
+          <!-- <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            rows={5}
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-golden dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            required
+          /> -->
+        </div>
+
+        <div className="flex justify-end">
+          <button
+            type="submit"
+            className="bg-golden hover:bg-golden-hover text-white px-6 py-3 rounded-md transition-colors flex items-center"
+          >
+            Enviar Mensaje
+            <!-- <Send className="ml-2 h-4 w-4" /> -->
+          </button>
+        </div>
+      </form>
+    <!-- )} -->
+  </div>
+
+  <!-- {/* Redes sociales */} -->
+  <div className="bg-white dark:bg-dark-bg-secondary rounded-lg shadow-md p-6">
+    <h2 className="text-2xl font-bold mb-6 dark:text-white">Síguenos</h2>
+
+    <div className="space-y-6">
+      <p className="text-gray-600 dark:text-gray-400">
+        Mantente al día con nuestras últimas promociones, estilos y consejos de cuidado personal siguiéndonos en
+        nuestras redes sociales.
+      </p>
+
+      <div className="space-y-4">
+        <a
+          href="https://facebook.com/barberstyle"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center p-3 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-md hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
+        >
+          <!-- <Facebook className="h-6 w-6 mr-3" /> -->
+          <span className="font-medium">Facebook</span>
+        </a>
+
+        <a
+          href="https://instagram.com/barberstyle"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center p-3 bg-pink-50 dark:bg-pink-900/20 text-pink-600 dark:text-pink-400 rounded-md hover:bg-pink-100 dark:hover:bg-pink-900/30 transition-colors"
+        >
+          <!-- <Instagram className="h-6 w-6 mr-3" /> -->
+          <span className="font-medium">Instagram</span>
+        </a>
+
+        <a
+          href="https://twitter.com/barberstyle"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center p-3 bg-blue-50 dark:bg-blue-900/20 text-blue-500 dark:text-blue-400 rounded-md hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
+        >
+          <!-- <Twitter className="h-6 w-6 mr-3" /> -->
+          <span className="font-medium">Twitter</span>
+        </a>
+      </div>
+
+      <div className="pt-4 border-t dark:border-gray-700">
+        <h3 className="font-bold mb-3 dark:text-white">Contacto Directo</h3>
+        <p className="text-gray-600 dark:text-gray-400 mb-2">
+          <span className="font-medium">Email:</span> infobarberstyle.com
+        </p>
+        <p className="text-gray-600 dark:text-gray-400">
+          <span className="font-medium">Teléfono:</span> (123) 456-7890
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
