@@ -1,8 +1,10 @@
 .Footer {
-  width: 100vw;
+  padding: 3rem 1rem;
 
   .FooterContainer {
-    padding: 3rem 1rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 1368px;
     a {
       text-decoration: none;
       color: inherit;
