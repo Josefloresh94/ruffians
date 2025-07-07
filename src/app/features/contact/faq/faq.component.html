@@ -1,27 +1,32 @@
-<div className="bg-white dark:bg-dark-bg-secondary rounded-lg shadow-md p-6 mb-8">
-  <h2 className="text-2xl font-bold mb-6 dark:text-white">Preguntas Frecuentes</h2>
+<div
+  className="bg-white dark:bg-dark-bg-secondary rounded-lg shadow-md p-6 mb-8">
+  <h2 className="text-2xl font-bold mb-6 dark:text-white">
+    Preguntas Frecuentes
+  </h2>
 
   <div className="space-y-4">
     <!-- {faqs.map((faq, index) => ( -->
-      <div key={index} className="border dark:border-gray-700 rounded-md overflow-hidden">
-        <button
-          className="flex justify-between items-center w-full p-4 text-left font-medium dark:text-white"
-          >
-          <!-- onClick={() => toggleFaq(index)} -->
-          <!-- {faq.question}
+    <div
+      key="{index}"
+      className="border dark:border-gray-700 rounded-md overflow-hidden">
+      <button
+        className="flex justify-between items-center w-full p-4 text-left font-medium dark:text-white">
+        <!-- onClick={() => toggleFaq(index)} -->
+        <!-- {faq.question}
           {expandedFaq === index ? ( -->
-            <!-- <ChevronUp className="h-5 w-5 text-golden" /> -->
-          <!-- ) : ( -->
-            <!-- <ChevronDown className="h-5 w-5 text-golden" /> -->
-          <!-- )} -->
-        </button>
-
-        <!-- {expandedFaq === index && ( -->
-          <div className="p-4 pt-0 text-gray-600 dark:text-gray-400 border-t dark:border-gray-700">
-            <!-- {faq.answer} -->
-          </div>
+        <!-- <ChevronUp className="h-5 w-5 text-golden" /> -->
+        <!-- ) : ( -->
+        <!-- <ChevronDown className="h-5 w-5 text-golden" /> -->
         <!-- )} -->
+      </button>
+
+      <!-- {expandedFaq === index && ( -->
+      <div
+        className="p-4 pt-0 text-gray-600 dark:text-gray-400 border-t dark:border-gray-700">
+        <!-- {faq.answer} -->
       </div>
+      <!-- )} -->
+    </div>
     <!-- ))} -->
   </div>
 </div>

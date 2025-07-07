@@ -6,7 +6,12 @@ import { SubsidiariesComponent } from './subsidiaries/subsidiaries.component';
 
 @Component({
   selector: 'app-contact',
-  imports: [MapComponent, FAQComponent, FormSocialMediaComponent, SubsidiariesComponent],
+  imports: [
+    MapComponent,
+    FAQComponent,
+    FormSocialMediaComponent,
+    SubsidiariesComponent,
+  ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

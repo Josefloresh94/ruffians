@@ -1,5 +1,5 @@
 <header class="header">
-  <nav >
+  <nav>
     <!-- Versión escritorio -->
     <div class="navBar">
       <!-- Logo y modo oscuro/claro -->
@@ -7,6 +7,7 @@
         <span routerLink="/" class="brand">BarberStyle</span>
       </div>
       <div class="desktop-nav">
+        <a routerLink="/">Home</a>
         <a routerLink="/servicios">Servicios</a>
         <a routerLink="/cita">Agendar Cita</a>
         <a routerLink="/tienda">Tienda</a>
@@ -14,7 +15,7 @@
       </div>
       <!-- Iconos derecha -->
       <div class="icon-group">
-        <app-toggle/>
+        <app-toggle />
         <button routerLink="/">
           <fa-icon [icon]="faShoppingCart"></fa-icon>
         </button>
@@ -24,7 +25,7 @@
       </div>
       <!-- Versión móvil -->
       <div class="mobile-actions">
-        <app-toggle/>
+        <app-toggle />
         <button routerLink="/">
           <fa-icon [icon]="faShoppingCart"></fa-icon>
         </button>
@@ -48,9 +49,7 @@
         </li>
       </ul>
     </div>
-
   </nav>
-
 
   <!-- Menú usuario -->
   <ng-template>
@@ -67,5 +66,4 @@
       Cerrar Sesión
     </button> -->
   </ng-template>
-
 </header>

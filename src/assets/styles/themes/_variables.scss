@@ -1,26 +1,26 @@
 $colors-palette: (
-  "primary-gold": #c3a039,
-  "white": #ffffff,
-  "black": #000000,
-  "dark-gray": #1e1e1e,
-  "light-gray": #e0e0e0,
-  "dark-text": #333333,
-  "light-text": #ffffff,
+  'primary-gold': #c3a039,
+  'white': #ffffff,
+  'black': #000000,
+  'dark-gray': #1e1e1e,
+  'light-gray': #e0e0e0,
+  'dark-text': #333333,
+  'light-text': #ffffff,
 );
 
 $themes: (
-  "light": (
-    "primary": "primary-gold",
-    "secondary": "light-gray",
-    "tertiary": "dark-gray",
-    "text": "dark-text",
-    "background": "white"
+  'light': (
+    'primary': 'primary-gold',
+    'secondary': 'light-gray',
+    'tertiary': 'dark-gray',
+    'text': 'dark-text',
+    'background': 'white',
   ),
-  "dark": (
-    "primary": "primary-gold",
-    "secondary": "dark-gray",
-    "tertiary": "light-gray",
-    "text": "white",
-    "background": "black"
+  'dark': (
+    'primary': 'primary-gold',
+    'secondary': 'dark-gray',
+    'tertiary': 'light-gray',
+    'text': 'white',
+    'background': 'black',
   ),
 );

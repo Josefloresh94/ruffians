@@ -3,7 +3,7 @@
   padding: 5rem 0;
   background-color: var(--primary);
 
-  .CitaContainer{
+  .CitaContainer {
     margin: 0 auto;
     padding: 0 1rem;
     max-width: 1368px;
@@ -16,7 +16,7 @@
       font-weight: 700;
     }
 
-    p{
+    p {
       max-width: 42rem;
       margin: 0 auto;
       max-width: 42rem;
@@ -31,12 +31,12 @@
     gap: 1rem;
     justify-content: center;
     margin: 1rem 0;
-    a{
+    a {
       text-decoration: none;
     }
   }
 
-  .CallToAction-Cita{
+  .CallToAction-Cita {
     padding: 0.75rem 2rem;
     border-radius: 0.375rem;
     font-size: 1.125rem;
@@ -45,7 +45,7 @@
     background-color: white;
     color: var(--primary);
   }
-  .CallToAction-Contacto{
+  .CallToAction-Contacto {
     padding: 0.75rem 2rem;
     border-radius: 0.375rem;
     border-width: 2px;
@@ -58,7 +58,7 @@
   }
 
   @media (min-width: 768px) {
-    .CitaContainer{
+    .CitaContainer {
       h2 {
         font-size: 2.25rem;
         line-height: 2.5rem;

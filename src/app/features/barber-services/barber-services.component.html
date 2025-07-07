@@ -3,8 +3,9 @@
     <div class="BarberServices-Container-Header">
       <h1>Nuestros Servicios</h1>
       <p>
-        Ofrecemos una amplia gama de servicios de barbería profesional, combinando técnicas tradicionales con
-        tendencias modernas para brindarte la mejor experiencia.
+        Ofrecemos una amplia gama de servicios de barbería profesional,
+        combinando técnicas tradicionales con tendencias modernas para brindarte
+        la mejor experiencia.
       </p>
     </div>
 
@@ -12,19 +13,19 @@
       @for (service of services; track $index) {
         <div class="Card">
           <div class="Card-ServiceImage">
-              <img src="service.image" alt=service.name />
+            <img src="service.image" alt="service.name" />
           </div>
           <div class="Card-ServiceInformation">
             <div class="Card-ServiceInformation-Header">
               <div>
-                <h2>{{service.name}}</h2>
-                <p>{{service.description}}</p>
+                <h2>{{ service.name }}</h2>
+                <p>{{ service.description }}</p>
               </div>
               <div class="Card-ServiceInformation-Header_Price">
-                <span>{{service.price}}</span>
+                <span>{{ service.price }}</span>
                 <div class="Card-ServiceInformation-Header_Duration">
                   <fa-icon class="icon" [icon]="faClock"></fa-icon>
-                  {{service.duration}}
+                  {{ service.duration }}
                 </div>
               </div>
             </div>
@@ -35,7 +36,7 @@
                 @for (feature of service.features; track $index) {
                   <li>
                     <fa-icon class="icon" [icon]="faCheck"></fa-icon>
-                    <span>{{feature}}</span>
+                    <span>{{ feature }}</span>
                   </li>
                 }
               </ul>

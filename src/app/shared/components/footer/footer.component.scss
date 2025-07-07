@@ -15,27 +15,27 @@
     }
   }
 
-  .FooterContainer-Info{
+  .FooterContainer-Info {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
     margin-bottom: 2rem;
   }
 
-  .FooterContainer-Info_SocialMedia{
+  .FooterContainer-Info_SocialMedia {
     h3 {
       font-size: 1.25rem;
       font-weight: 700;
       line-height: 1.75rem;
       margin-bottom: 1rem;
     }
-    p{
+    p {
       margin-bottom: 1rem;
       color: var(--accent);
     }
   }
 
-  .FooterContainer-Info_SocialMedia-Icons{
+  .FooterContainer-Info_SocialMedia-Icons {
     display: flex;
     a {
       color: var(--accent);
@@ -48,17 +48,18 @@
     }
   }
 
-  .FooterContainer-Info_Links, .FooterContainer-Info_Services{
+  .FooterContainer-Info_Links,
+  .FooterContainer-Info_Services {
     h3 {
       font-size: 1.125rem;
       line-height: 1.75rem;
       font-weight: 700;
       margin-bottom: 1rem;
     }
-    ul{
-      li{
+    ul {
+      li {
         margin-bottom: 0.5rem;
-        a{
+        a {
           color: var(--accent);
           &:hover {
             color: var(--primary);
@@ -68,7 +69,7 @@
     }
   }
 
-  .FooterContainer-Info_Contact{
+  .FooterContainer-Info_Contact {
     h3 {
       font-size: 1.125rem;
       line-height: 1.75rem;
@@ -80,25 +81,25 @@
       color: var(--accent);
       font-size: 1rem;
       line-height: 1.5rem;
-      p:nth-of-type(3){
+      p:nth-of-type(3) {
         margin-top: 1rem;
       }
     }
   }
 
-  .Schedule{
+  .Schedule {
     font-size: 1rem;
     line-height: 1.5rem;
     color: var(--accent);
     margin-top: 1rem;
   }
 
-  .FooterContainer-Register{
+  .FooterContainer-Register {
     text-align: center;
   }
 
   @media (min-width: 768px) {
-    .FooterContainer-Info{
+    .FooterContainer-Info {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }

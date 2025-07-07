@@ -1,4 +1,4 @@
-.Testimonials{
+.Testimonials {
   width: 100vw;
   padding: 5rem 0;
   background-color: var(--secondary);
@@ -9,7 +9,7 @@
     max-width: 1368px;
   }
 
-  .TestimonialsContainer-Header{
+  .TestimonialsContainer-Header {
     text-align: center;
     margin-bottom: 2rem;
     color: white;
@@ -19,32 +19,34 @@
       margin-bottom: 1rem;
       line-height: 2.25rem;
     }
-    p{
+    p {
       max-width: 42rem;
       margin: 0 auto;
     }
   }
 
-  .TestimonialsContainer-Card{
+  .TestimonialsContainer-Card {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 2rem;
   }
 
-  .TestimonialsContainer-Card_Content{
+  .TestimonialsContainer-Card_Content {
     padding: 2rem;
     border-radius: 0.9rem;
     background-color: var(--background);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow:
+      0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
-  .TestimonialsContainer-Card_Content-Data{
+  .TestimonialsContainer-Card_Content-Data {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
   }
 
-  .TestimonialsContainer-Card_Content-Data-Image{
+  .TestimonialsContainer-Card_Content-Data-Image {
     overflow: hidden;
     position: relative;
     margin-right: 1rem;
@@ -52,38 +54,38 @@
     width: 3rem;
     height: 3rem;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
 
-  .TestimonialsContainer-Card_Content-Data-Info{
+  .TestimonialsContainer-Card_Content-Data-Info {
     flex-grow: 1;
-    h4{
+    h4 {
       font-size: 1.125rem;
       padding-bottom: 0.5rem;
       font-weight: 700;
     }
-    p{
+    p {
       font-size: 0.875rem;
     }
   }
 
-  .Testimonial{
+  .Testimonial {
     font-style: italic;
   }
 
   @media (min-width: 768px) {
-    .TestimonialsContainer-Header{
+    .TestimonialsContainer-Header {
       h2 {
         font-size: 2.25rem;
         line-height: 2.5rem;
       }
     }
 
-    .TestimonialsContainer-Card{
+    .TestimonialsContainer-Card {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }

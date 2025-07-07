@@ -3,14 +3,11 @@
 
   <!-- {/* Selector de sucursales (móvil) */} -->
   <div class="Subsidiaries-Options-Mobile">
-    <select
-      class="Mobile-Options"
-      (change)="updateActiveLocation()"
-      >
+    <select class="Mobile-Options" (change)="updateActiveLocation()">
       <!-- [(ngModel)]="activeLocationId" -->
       @for (location of locations; track location.id) {
         <option [value]="location.id">
-          {{location.name}}
+          {{ location.name }}
         </option>
       }
     </select>
@@ -22,9 +19,8 @@
       <button
         class="Desktop-Options"
         [class.active]="activeLocationId === location.id"
-        (click)="activeLocationId = location.id; updateActiveLocation()"
-      >
-        {{location.name}}
+        (click)="activeLocationId = location.id; updateActiveLocation()">
+        {{ location.name }}
       </button>
     }
   </div>
@@ -33,23 +29,22 @@
   <div class="Location-Card">
     <div class="Location-Content">
       <div class="Location-Image">
-        <img [src]="selectedLocation.image" [alt]="selectedLocation.name">
+        <img [src]="selectedLocation.image" [alt]="selectedLocation.name" />
       </div>
       <div class="Location-Details">
-        <h3>{{selectedLocation.name}}</h3>
+        <h3>{{ selectedLocation.name }}</h3>
 
         <div class="Details-Container">
           <div class="Detail-Item">
             <fa-icon class="icon" [icon]="faLocationDot"></fa-icon>
             <div>
               <p class="Detail-Label">Dirección</p>
-              <p class="Detail-Text">{{selectedLocation.address}}</p>
+              <p class="Detail-Text">{{ selectedLocation.address }}</p>
               <a
                 [href]="selectedLocation.mapUrl"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="Map-Link"
-              >
+                class="Map-Link">
                 Ver en mapa
                 <fa-icon class="small-icon" [icon]="faChevronRight"></fa-icon>
               </a>
@@ -60,7 +55,7 @@
             <fa-icon class="icon" [icon]="faPhone"></fa-icon>
             <div>
               <p class="Detail-Label">Teléfono</p>
-              <p class="Detail-Text">{{selectedLocation.phone}}</p>
+              <p class="Detail-Text">{{ selectedLocation.phone }}</p>
             </div>
           </div>
 
@@ -68,7 +63,7 @@
             <fa-icon class="icon" [icon]="faEnvelope"></fa-icon>
             <div>
               <p class="Detail-Label">Email</p>
-              <p class="Detail-Text">{{selectedLocation.email}}</p>
+              <p class="Detail-Text">{{ selectedLocation.email }}</p>
             </div>
           </div>
 
@@ -78,7 +73,7 @@
               <p class="Detail-Label">Horario</p>
               @for (hour of selectedLocation.hours; track $index) {
                 <p class="Detail-Text">
-                  {{hour}}
+                  {{ hour }}
                 </p>
               }
             </div>
@@ -86,11 +81,8 @@
         </div>
 
         <div class="Action-Container">
-          <a
-            routerLink="/citas"
-            class="Booking-Button"
-          >
-            Agendar Cita en {{selectedLocation.name}}
+          <a routerLink="/citas" class="Booking-Button">
+            Agendar Cita en {{ selectedLocation.name }}
           </a>
         </div>
       </div>
