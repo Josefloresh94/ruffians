@@ -1,0 +1,50 @@
+.FaqsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+
+  .FaqItem {
+    border-radius: 0.5rem;
+    background-color: var(--tertiary);
+    box-shadow: 0 4px 6px -1px var(--text);
+    overflow: hidden;
+
+    .FaqQuestion {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: var(--text);
+      padding: 1.5rem 1.5rem 1rem 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      outline: none;
+
+      .FaqArrow {
+        transition: transform 0.2s;
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        &.open {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .FaqAnswer {
+      max-height: 500px;
+      opacity: 1;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      padding: 1rem 1.5rem;
+      color: var(--text);
+      line-height: 1.5;
+      &.open {
+        display: block;
+      }
+    }
+  }
+}

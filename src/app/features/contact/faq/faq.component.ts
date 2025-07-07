@@ -1,8 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-faq',
-  imports: [],
+  imports: [FontAwesomeModule],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -40,4 +42,13 @@ export class FAQComponent {
         'Sí, puedes cancelar o reprogramar tu cita hasta 2 horas antes de la hora programada sin ningún cargo adicional.',
     },
   ];
+
+  faChevronUp = faChevronUp;
+  faChevronDown = faChevronDown;
+
+  openIndex: number | null = null;
+
+  toggle(index: number) {
+    this.openIndex = this.openIndex === index ? null : index;
+  }
 }
